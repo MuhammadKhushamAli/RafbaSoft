@@ -1,9 +1,9 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router'
-import Layout from './Layout'
-import { AboutUs, ContactUs, Home, Services } from './components'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router';
+import Layout from './Layout';
+import { AboutUs, ContactUs, Home, Services } from './components';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -11,13 +11,13 @@ const router = createBrowserRouter(
       <Route index={true} element={<Home />} />
       <Route path='Services' element={<Services />} />
       <Route path='About-Us' element={<AboutUs />} />
-      <Route path='Contact-US' element={<ContactUs />} />
+      <Route path='Contact-Us' element={<ContactUs />} />
     </Route>
   )
 );
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ReactProvider router={router} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
