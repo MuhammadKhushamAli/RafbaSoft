@@ -1,10 +1,23 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router'
+import Layout from './Layout'
+import { AboutUs, ContactUs, Home, Services } from './components'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Layout />}>
+      <Route index={true} element={<Home />} />
+      <Route path='Services' element={<Services />} />
+      <Route path='About-Us' element={<AboutUs />} />
+      <Route path='Contact-US' element={<ContactUs />} />
+    </Route>
+  )
+);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <ReactProvider router={router} />
   </StrictMode>,
 )
