@@ -5,7 +5,7 @@ import GymImg from '../../assets/Gym.png'
 export default function Home() {
     return (
         <main
-            className='grid grid-cols-1 w-full'>
+            className='grid grid-cols-1 w-screen'>
             <article
                 className='flex flex-row justify-between items-center p-[10%] max-sm:p-[5%] h-screen'>
                 <h1
