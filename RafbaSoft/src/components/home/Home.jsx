@@ -1,6 +1,6 @@
-import IntroImg from '../../assets/IntroImg.png';
-import TextileImg from '../../assets/Textile.png'
-import GymImg from '../../assets/Gym.png'
+import IntroImg from '/assets/IntroImg.png';
+import TextileImg from '/assets/Textile.png'
+import GymImg from '/assets/Gym.png'
 
 export default function Home() {
     return (

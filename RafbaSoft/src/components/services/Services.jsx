@@ -1,9 +1,55 @@
-export default function Services()
-{
-    return(
+import { useEffect, useState } from "react";
+import ServicesCard from "./ServiceCard";
+
+const cardsArray = [
+    {
+        name: 'Artitecture.jpg',
+        description: "Our architecture software empowers professionals to design, visualize, and manage building projects with precision. From 2D drafting to 3D modeling and BIM integration, it streamlines workflows for architects, engineers, and designers—enhancing creativity, collaboration, and efficiency."
+    },
+    {
+        name: 'Business.jpg',
+        description: "Our business management software offers an all-in-one solution to streamline operations, handle finances, monitor performance, and boost productivity. Whether you're managing a startup or a growing enterprise, it simplifies decision-making through real-time data insights and automation."
+    },
+    {
+        name: 'Clinic.jpg',
+        description: "Our clinic management software is designed to streamline patient care, appointment scheduling, medical records, and billing in one secure and user-friendly platform. Enhance efficiency, reduce wait times, and focus more on patient wellness with automated workflows and real-time access to data."
+    },
+    {
+        name: 'CRM.jpg',
+        description: "Our CRM software helps you manage customer relationships, track sales leads, automate workflows, and gain insights through powerful analytics. From lead generation to post-sale support, it centralizes all interactions to boost productivity and drive business growth."
+    },
+    {
+        name: 'GYM.jpg',
+        description: "Our Gym Management Software simplifies member tracking, class scheduling, payments, and performance analytics — all in one platform. Whether you're running a fitness studio or a large gym, it helps streamline operations and enhance member engagement."
+    },
+    {
+        name: 'LAW.jpg',
+        description: "Our Law Practice Management Software is designed for legal professionals to manage cases, client records, documents, appointments, and billing efficiently. It ensures compliance, improves workflow, and helps law firms deliver better legal services with less administrative burden."
+    },
+    {
+        name: 'Property.jpg',
+        description: "Our Property Management Software simplifies real estate operations by handling tenant records, rent collection, maintenance requests, lease agreements, and financial reporting—all in one place. It's ideal for landlords, agents, and property managers seeking efficiency and control."
+    },
+    {
+        name: 'Warehouse_Management.jpg',
+        description: "Optimize your inventory and streamline logistics with our Warehouse Management Software. From real-time stock tracking and order fulfillment to automated alerts and reporting, it ensures accuracy, speed, and efficiency in every warehouse operation."
+    }
+];
+
+export default function Services() {
+    const [images, setImages] = useState([]);
+
+    return (
         <main
-        className="w-screen">
-            
+            className="w-screen p-[10%] max-sm:p-[5%] flex flex-row flex-wrap justify-evenly items-center gap-9">
+            <h1
+                className="text-7xl w-screen text-center font-black font-serif pb-[5%] max-sm:pb-[2%]">
+                Our Services</h1>
+            {
+                cardsArray.map((image, i) => (
+                    <ServicesCard key={i} imageUrl={`/assets/${image.name}`} description={image.description} />
+                ))
+            }
         </main>
     )
 }

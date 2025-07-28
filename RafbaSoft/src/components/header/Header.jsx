@@ -1,9 +1,18 @@
 import { Link, NavLink } from 'react-router';
-import NavLogo from '../../assets/Main.png';
+import NavLogo from '/assets/Main.png';
 
 export default function Header() {
     return (
-        <nav className='flex flex-row h-[10vh] justify-between w-full max-sm:flex-col max-sm:h-screen max-sm:w-[10vw] max-sm:fixed top-0'>
+        <nav className='flex
+        flex-row
+        h-[10vh]
+        justify-between
+        w-full
+        max-sm:flex-col
+        max-sm:h-screen
+        max-sm:w-[10vw]
+        max-sm:fixed
+        top-0'>
             <Link
                 to='/'
                 className='w-[20%]'
