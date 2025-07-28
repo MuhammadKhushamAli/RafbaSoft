@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <footer
-            className="w-full h-[120vh] bg-blue-950 flex flex-col justify-end">
+            className="w-full h-[120vh] bg-blue-950 flex flex-col justify-end box-border">
             <div className="flex flex-row justify-between h-[20%] items-center max-sm:flex-col">
                 <div>
                     <h2 className="text-white">Need Any Help?</h2>

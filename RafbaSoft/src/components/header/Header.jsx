@@ -12,7 +12,8 @@ export default function Header() {
         max-sm:h-screen
         max-sm:w-[10vw]
         max-sm:fixed
-        top-0'>
+        top-0
+        box-border'>
             <Link
                 to='/'
                 className='w-[20%]'

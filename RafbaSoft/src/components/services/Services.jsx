@@ -41,7 +41,18 @@ export default function Services() {
 
     return (
         <main
-            className="w-screen p-[10%] max-sm:p-[5%] flex flex-row flex-wrap justify-evenly items-center gap-9">
+            className="w-screen
+            p-[10%]
+            pt-[5%]
+            max-sm:p-[5%]
+            max-sm:pt-[2%]
+            flex
+            flex-row
+            flex-wrap
+            justify-evenly
+            items-center
+            gap-9
+            box-border">
             <h1
                 className="text-7xl w-screen text-center font-black font-serif pb-[5%] max-sm:pb-[2%]">
                 Our Services</h1>
