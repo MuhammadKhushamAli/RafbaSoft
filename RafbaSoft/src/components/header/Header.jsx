@@ -7,7 +7,7 @@ export default function Header() {
         flex-row
         h-[10vh]
         justify-evenly
-        w-screen
+        w-full
         top-0
         box-border'>
             <Link

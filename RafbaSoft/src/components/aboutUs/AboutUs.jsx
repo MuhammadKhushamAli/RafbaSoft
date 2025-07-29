@@ -1,7 +1,7 @@
 export default function AboutUs() {
     return (
         <main
-        className="w-screen
+        className="w-full
         p-[10%]
         pt-[5%]
         max-sm:p-[5%]

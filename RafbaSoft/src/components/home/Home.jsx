@@ -16,7 +16,7 @@ export default function Home() {
         <main
             className='grid
             grid-cols-1
-            w-screen
+            w-full
             box-border'>
             <article
                 className='w-full
