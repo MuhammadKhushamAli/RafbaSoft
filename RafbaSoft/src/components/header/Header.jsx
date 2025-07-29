@@ -6,12 +6,8 @@ export default function Header() {
         <nav className='flex
         flex-row
         h-[10vh]
-        justify-between
-        w-full
-        max-sm:flex-col
-        max-sm:h-screen
-        max-sm:w-[10vw]
-        max-sm:fixed
+        justify-evenly
+        w-screen
         top-0
         box-border'>
             <Link
@@ -24,11 +20,15 @@ export default function Header() {
             </Link>
 
             <ul
-            className='flex flex-row w-[80%] justify-evenly items-center h-full max-sm:flex-col'>
-                <li className='w-[20%] h-full flex flex-row items-center justify-center'><NavLink to='/'>Home</NavLink></li>
-                <li className='w-[20%] h-full flex flex-row items-center justify-center'><NavLink to='Services'>Services</NavLink></li>
-                <li className='w-[20%] h-full flex flex-row items-center justify-center'><NavLink to='About-Us'>About Us</NavLink></li>
-                <li className='w-[20%] h-full flex flex-row items-center justify-center'><NavLink to='Contact-Us'>Contact Us</NavLink></li>
+            className='flex flex-row w-[70%] justify-evenly max-sm:justify-between items-center h-full'>
+                <li className='w-[20%] h-full'><NavLink to='/'
+                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 border-b-red-600' : 'text-black'} w-full h-full flex flex-row justify-center items-center`}>Home</NavLink></li>
+                <li className='w-[20%] h-full'><NavLink to='Services'
+                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 border-b-red-600' : 'text-black'} w-full h-full flex flex-row justify-center items-center`}>Services</NavLink></li>
+                <li className='w-[20%] h-full'><NavLink to='About-Us'
+                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 border-b-red-600' : 'text-black'} w-full h-full flex flex-row justify-center items-center`}>About Us</NavLink></li>
+                <li className='w-[20%] h-full'><NavLink to='Contact-Us'
+                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 border-b-red-600' : 'text-black'} w-full h-full flex flex-row justify-center items-center`}>Contact Us</NavLink></li>
             </ul>
         </nav>
     )

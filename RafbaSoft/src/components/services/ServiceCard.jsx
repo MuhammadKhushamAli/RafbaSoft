@@ -5,6 +5,7 @@ export default function ServicesCard({ imageUrl, description }) {
     return (
         <div
             className="w-[30%]
+            max-sm:w-[90%]
             min-h-[400px]
             p-[2%]
             text-black

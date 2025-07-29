@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ServicesCard from "./ServiceCard";
 
 const cardsArray = [
@@ -54,7 +54,7 @@ export default function Services() {
             gap-9
             box-border">
             <h1
-                className="text-7xl w-screen text-center font-black font-serif pb-[5%] max-sm:pb-[2%]">
+                className="text-7xl max-sm:text-5xl w-screen text-center font-black font-serif pb-[5%] max-sm:pb-[2%]">
                 Our Services</h1>
             {
                 cardsArray.map((image, i) => (

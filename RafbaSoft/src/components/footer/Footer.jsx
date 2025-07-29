@@ -1,8 +1,8 @@
 export default function Footer() {
     return (
         <footer
-            className="w-full h-[120vh] bg-blue-950 flex flex-col justify-end box-border">
-            <div className="flex flex-row justify-between h-[20%] items-center max-sm:flex-col">
+            className="w-screen  h-[120vh] bg-blue-950 flex flex-col justify-end box-border">
+            <div className="w-full flex flex-row justify-between h-[20%] items-center max-sm:flex-col">
                 <div>
                     <h2 className="text-white">Need Any Help?</h2>
                     <h1 className="text-white">Contact us Anytime</h1>
@@ -24,7 +24,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row justify-evenly h-[20%] items-center">
+            <div className="w-full flex flex-row justify-evenly h-[20%] items-center">
                 <a href=""className="text-white">Terms and Conditions</a>
                 <a href=""className="text-white">Private Policies</a>
             </div>
