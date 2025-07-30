@@ -144,6 +144,7 @@ export default function Home() {
                 flex-row
                 max-sm:flex-col-reverse
                 justify-between
+                max-sm:justify-evenly
                 items-center
                 p-[10%]
                 max-sm:p-[5%]
