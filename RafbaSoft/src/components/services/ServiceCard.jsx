@@ -26,7 +26,7 @@ export default function ServicesCard({ imageUrl, description }) {
             object-cover"/>
                 {isClicked ?
                     <p
-                        className="text-center font-serif pb-2 pt-2">{description}
+                        className="text-center font-[Roboto] pb-2 pt-2">{description}
                     </p> : null}
                 <button onClick={() => setIsClicked(prev => !prev)}
                     className="bg-red-500

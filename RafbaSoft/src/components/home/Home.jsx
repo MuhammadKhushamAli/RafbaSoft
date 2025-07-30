@@ -61,7 +61,7 @@ export default function Home() {
                 max-sm:h-[80%]
                 box-border`}>
                 <h1
-                    className='w-[30%] max-sm:w-[50%] text-5xl text-center font-semibold font-serif uppercase max-sm:text-lg'>We build smart software that simplifies business</h1>
+                    className='font-[Montserrat] w-[30%] max-sm:w-[50%] text-5xl text-center font-semibold uppercase max-sm:text-lg'>We build smart software that simplifies business</h1>
                 <img src={IntroImg} alt="Intro_Image"
                     className='w-[40%] max-sm:w-[50%]' />
             </InView>
@@ -73,14 +73,16 @@ export default function Home() {
                 p-[10%]
                 max-sm:p-[5%]
                 max-sm:mt-[15%]
-                max-sm:mb-[15%]`}>
+                max-sm:mb-[15%]`}
+                thresholdVal={0.1}>
                 <h1
                     className='w-full
                 text-5xl
                 max-sm:text-3xl
                 text-center
                 font-black
-                font-serif
+                font-[Montserrat]
+                font-
                 p-[2%]
                 box-border'>
                     Our Customers
@@ -110,7 +112,7 @@ export default function Home() {
             max-sm:p-[2%]
             box-border`}>
                 <h2
-                    className='w-full text-4xl max-sm:text-3xl text-center font-semibold font-serif uppercase'>Why Rafba Soft?</h2>
+                    className='w-full text-4xl max-sm:text-3xl text-center font-semibold font-[Montserrat] uppercase'>Why Rafba Soft?</h2>
             </InView>
 
             <InView
@@ -129,8 +131,9 @@ export default function Home() {
                 box-border`}>
                 <img src={TextileImg} alt="Textile-Image"
                     className='w-[40%] max-sm:w-full' />
-                <h3
-                    className='w-[30%] max-sm:w-full text-xl text-center font-serif uppercase max-sm:text-lg'>Our textile software simplifies every stage of textile production from design and weaving to inventory and order management. With powerful automation, real-time tracking, and industry-specific features, it helps textile businesses boost productivity, reduce waste, and stay competitive.</h3>
+                <p
+                    className='w-[30%] max-sm:w-full max-sm:p-[10%] text-xl text-center font-[Roboto] uppercase max-sm:text-lg'>Our textile software simplifies every stage of textile production from design and weaving to inventory and order management. With powerful automation, real-time tracking, and industry-specific features, it helps textile businesses boost productivity, reduce waste, and stay competitive.
+                    </p>
             </InView>
 
             <InView
@@ -146,8 +149,9 @@ export default function Home() {
                 max-sm:p-[5%]
                 h-screen
                 box-border`}>
-                <h3
-                    className='w-[30%] max-sm:w-full text-xl text-center font-serif uppercase max-sm:text-lg'>Our gym software is designed to streamline fitness center operations from membership management and class scheduling to billing and attendance tracking. With an intuitive dashboard and smart automation, it helps gyms save time, engage clients, and grow faster.</h3>
+                <p
+                    className='w-[30%] max-sm:w-full max-sm:p-[10%] text-xl text-center font-[Roboto] uppercase max-sm:text-lg'>Our gym software is designed to streamline fitness center operations from membership management and class scheduling to billing and attendance tracking. With an intuitive dashboard and smart automation, it helps gyms save time, engage clients, and grow faster.
+                    </p>
                 <img src={GymImg} alt="Gym_Image"
                     className='w-[40%] max-sm:w-full' />
             </InView>
@@ -169,7 +173,7 @@ export default function Home() {
                 <img src={TextileImg} alt="Textile-Image"
                     className='w-[40%] max-sm:w-full' />
                 <h3
-                    className='w-[30%] max-sm:w-full text-xl max-sm:text-lg text-center font-serif uppercase'>Our pharmacy management software is built to optimize every aspect of a pharmacy's workflow. From inventory tracking and automated refills to sales reports and prescription management, it ensures accuracy, efficiency, and regulatory compliance helping pharmacists serve customers faster and more safely.</h3>
+                    className='w-[30%] max-sm:w-full max-sm:p-[10%] text-xl max-sm:text-lg text-center font-[Roboto] uppercase'>Our pharmacy management software is built to optimize every aspect of a pharmacy's workflow. From inventory tracking and automated refills to sales reports and prescription management, it ensures accuracy, efficiency, and regulatory compliance helping pharmacists serve customers faster and more safely.</h3>
             </InView>
         </main >
     )

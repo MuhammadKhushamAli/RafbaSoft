@@ -55,7 +55,7 @@ export default function ContactUs() {
             max-sm:text-5xl
             text-center
             font-black
-            font-serif
+            font-[Montserrat]
             pb-[5%]
             max-sm:pb-[5%]">
                     Contact Us

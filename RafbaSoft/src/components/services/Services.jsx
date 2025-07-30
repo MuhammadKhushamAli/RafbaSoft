@@ -58,7 +58,7 @@ export default function Services() {
                 afterClassName={'opacity-100 tansform-all tanslate-x-0 duration-700'}
                 className={'w-full max-sm:mt-[15%]'}>
             <h1
-                className="text-7xl max-sm:text-5xl w-full text-center font-black font-serif pb-[5%] max-sm:pb-[2%]">
+                className="text-6xl max-sm:text-5xl w-full text-center font-black font-[Montserrat] pb-[5%] max-sm:pb-[2%]">
                 Our Services</h1>
             </InView>
             {
