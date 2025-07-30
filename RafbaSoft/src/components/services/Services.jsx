@@ -1,5 +1,5 @@
-import { useState } from "react";
 import ServicesCard from "./ServiceCard";
+import InView from "../inView/InView";
 
 const cardsArray = [
     {
@@ -37,7 +37,6 @@ const cardsArray = [
 ];
 
 export default function Services() {
-    const [images, setImages] = useState([]);
 
     return (
         <main
@@ -52,13 +51,19 @@ export default function Services() {
             justify-evenly
             items-center
             gap-9
-            box-border">
+            box-border
+            overflow-hidden">
+            <InView
+                beforeClassName={'opacity-0 translate-x-[200px]'}
+                afterClassName={'opacity-100 tansform-all tanslate-x-0 duration-700'}
+                className={'w-full'}>
             <h1
-                className="text-7xl max-sm:text-5xl w-screen text-center font-black font-serif pb-[5%] max-sm:pb-[2%]">
+                className="text-7xl max-sm:text-5xl w-full text-center font-black font-serif pb-[5%] max-sm:pb-[2%]">
                 Our Services</h1>
+            </InView>
             {
                 cardsArray.map((image, i) => (
-                    <ServicesCard key={i} imageUrl={`/assets/${image.name}`} description={image.description} />
+                        <ServicesCard key={i} imageUrl={`/assets/${image.name}`} description={image.description} />
                 ))
             }
         </main>
