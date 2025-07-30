@@ -8,7 +8,7 @@ export default function ServicesCard({ imageUrl, description }) {
             beforeClassName={'opacity-0 translate-y-[100px]'}
             afterClassName={'opacity-100 tansform-all translate-y-0 duration-700'}
             className={`w-[30%]
-            max-sm:w-[90%]
+            max-md:w-[90%]
             min-h-[400px]
             p-[2%]
             text-black

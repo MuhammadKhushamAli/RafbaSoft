@@ -61,7 +61,7 @@ export default function Home() {
                 max-sm:h-[80%]
                 box-border`}>
                 <h1
-                    className='font-[Montserrat] w-[30%] max-sm:w-[50%] text-5xl text-center font-semibold uppercase max-sm:text-lg'>We build smart software that simplifies business</h1>
+                    className='font-[Montserrat] w-[30%] max-sm:w-[50%] text-5xl text-center font-bold uppercase max-sm:text-lg'>We build smart software that simplifies business</h1>
                 <img src={IntroImg} alt="Intro_Image"
                     className='w-[40%] max-sm:w-[50%]' />
             </InView>
@@ -82,7 +82,6 @@ export default function Home() {
                 text-center
                 font-black
                 font-[Montserrat]
-                font-
                 p-[2%]
                 box-border'>
                     Our Customers
@@ -112,7 +111,7 @@ export default function Home() {
             max-sm:p-[2%]
             box-border`}>
                 <h2
-                    className='w-full text-4xl max-sm:text-3xl text-center font-semibold font-[Montserrat] uppercase'>Why Rafba Soft?</h2>
+                    className='w-full text-4xl max-sm:text-3xl text-center font-bold font-[Montserrat] uppercase'>Why Rafba Soft?</h2>
             </InView>
 
             <InView
@@ -128,6 +127,7 @@ export default function Home() {
                 p-[10%]
                 max-sm:p-[2%]
                 h-screen
+                max-md:h-[150vh]
                 box-border`}>
                 <img src={TextileImg} alt="Textile-Image"
                     className='w-[40%] max-sm:w-full' />
@@ -148,6 +148,7 @@ export default function Home() {
                 p-[10%]
                 max-sm:p-[5%]
                 h-screen
+                max-md:h-[150vh]
                 box-border`}>
                 <p
                     className='w-[30%] max-sm:w-full max-sm:p-[10%] text-xl text-center font-[Roboto] uppercase max-sm:text-lg'>Our gym software is designed to streamline fitness center operations from membership management and class scheduling to billing and attendance tracking. With an intuitive dashboard and smart automation, it helps gyms save time, engage clients, and grow faster.
@@ -169,6 +170,7 @@ export default function Home() {
                 p-[10%]
                 max-sm:p-[2%]
                 h-screen
+                max-md:h-[150vh]
                 box-border`}>
                 <img src={TextileImg} alt="Textile-Image"
                     className='w-[40%] max-sm:w-full' />

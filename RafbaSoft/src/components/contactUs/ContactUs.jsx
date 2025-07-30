@@ -66,7 +66,7 @@ export default function ContactUs() {
                 beforeClassName={'opacity-0 translate-x-[200px]'}
                 afterClassName={'opacity-100 tansform-all tanslate-x-0 duration-700'}
                 className={`w-[50%]
-                max-sm:w-[90%]`}>
+                max-md:w-[90%]`}>
                 <fieldset
                     className="w-full
                     border
