@@ -22,13 +22,13 @@ export default function Header() {
             <ul
             className='flex flex-row w-[70%] justify-evenly max-sm:justify-between items-center h-full'>
                 <li className='w-[20%] h-full'><NavLink to='/'
-                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 transition-colors hover:border-b-red-600 duration-500' : 'text-black border-white border-2'} w-full h-full flex flex-row justify-center items-center`}>Home</NavLink></li>
+                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 transition-colors hover:border-b-red-600 duration-500' : 'text-black border-white border-2'} w-full h-full flex flex-row justify-center items-center text-center`}>Home</NavLink></li>
                 <li className='w-[20%] h-full'><NavLink to='Services'
-                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 transition-colors hover:border-b-red-600 duration-500' : 'text-black border-white border-2'} w-full h-full flex flex-row justify-center items-center`}>Services</NavLink></li>
+                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 transition-colors hover:border-b-red-600 duration-500' : 'text-black border-white border-2'} w-full h-full flex flex-row justify-center items-center text-center`}>Services</NavLink></li>
                 <li className='w-[20%] h-full'><NavLink to='About-Us'
-                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 transition-colors hover:border-b-red-600 duration-500' : 'text-black border-white border-2'} w-full h-full flex flex-row justify-center items-center`}>About Us</NavLink></li>
+                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 transition-colors hover:border-b-red-600 duration-500' : 'text-black border-white border-2'} w-full h-full flex flex-row justify-center items-center text-center`}>About Us</NavLink></li>
                 <li className='w-[20%] h-full'><NavLink to='Contact-Us'
-                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 transition-colors hover:border-b-red-600 duration-500' : 'text-black border-white border-2'} w-full h-full flex flex-row justify-center items-center`}>Contact Us</NavLink></li>
+                className={({isActive}) => `${isActive ? 'text-red-600 border-b-3 transition-colors hover:border-b-red-600 duration-500' : 'text-black border-white border-2'} w-full h-full flex flex-row justify-center items-center text-center`}>Contact Us</NavLink></li>
             </ul>
         </nav>
     )

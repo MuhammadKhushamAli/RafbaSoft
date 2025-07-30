@@ -56,7 +56,7 @@ export default function Services() {
             <InView
                 beforeClassName={'opacity-0 translate-x-[200px]'}
                 afterClassName={'opacity-100 tansform-all tanslate-x-0 duration-700'}
-                className={'w-full'}>
+                className={'w-full max-sm:mt-[15%]'}>
             <h1
                 className="text-7xl max-sm:text-5xl w-full text-center font-black font-serif pb-[5%] max-sm:pb-[2%]">
                 Our Services</h1>

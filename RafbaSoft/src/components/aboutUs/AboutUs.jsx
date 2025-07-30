@@ -14,9 +14,10 @@ export default function AboutUs() {
             <InView
                 beforeClassName={'opacity-0 -translate-x-[200px]'}
                 afterClassName={'opacity-100 transition-transform translate-x-0 duration-700'}
-                className={'w-full'}>
+                className={'w-full max-sm:mt-[15%]'}>
                 <h1
-                    className="w-full text-6xl text-center font-black font-serif pb-[5%] max-sm:pb-[2%]"
+                    className="w-full text-7xl max-sm:text-5xl text-center font-black font-serif pb-[5%] max-sm:pb-[2%]
+                    max-sm:mb-[10%]"
                 >
                     About Us
                 </h1>
@@ -25,7 +26,7 @@ export default function AboutUs() {
             <InView
                 beforeClassName={'opacity-0 translate-y-[200px]'}
                 afterClassName={'opacity-100 transition-transform translate-y-0 duration-700'}
-                className={'w-full'}>
+                className={'w-full text-center'}>
                 <p>Founded in 2023, Rafba Soft began its journey with a simple vision — to empower businesses through smart, custom-built software solutions. Starting with ERP systems developed in Oracle, we quickly gained recognition for crafting high-performance, business-specific applications that simplify operations and drive growth.
 
                     As the business landscape evolved, so did we. Today, Rafba Soft proudly offers end-to-end Odoo ERP solutions alongside fully customized software tailored to the unique needs of industries like retail, fitness, textiles, petroleum, and healthcare.

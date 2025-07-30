@@ -71,7 +71,9 @@ export default function Home() {
                 afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
                 className={`w-full
                 p-[10%]
-                max-sm:p-[2%]`}>
+                max-sm:p-[5%]
+                max-sm:mt-[15%]
+                max-sm:mb-[15%]`}>
                 <h1
                     className='w-full
                 text-5xl
@@ -89,6 +91,7 @@ export default function Home() {
                     justify-between
                     m-auto
                     w-[50%]
+                    max-sm:w-[80%]
                     overflow-hidden
                     whitespace-nowrap'>
                     {customersLogos.map((customer, i) => (
