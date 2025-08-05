@@ -9,30 +9,28 @@ export default function Footer() {
                 </div>
                 <div>
                     <h2 className="text-white text-center font-[Montserrat] font-semibold">Call us</h2>
-                    <a href="https://wa.me/923107488488?text=Hello" target="_blank"
+                    <a href="https://wa.me/923210700018?text=Hello" target="_blank"
                         className="text-white text-center">
-                        +92310-7488488</a>
+                        Whatsapp</a>
                 </div>
                 <div>
                     <h2 className="text-white text-center font-[Montserrat] font-semibold">Email us</h2>
-                    <a href="mailto:khusham7676@gmail.com" target="_blank"
+                    <a href="mailto:rafbasoft@gmail.com" target="_blank"
                         className="text-white
                         text-center
-                        ">khusham7676@gmail.com</a>
+                        ">Mail to: Rafba-Soft</a>
                 </div>
                 <div
                     className="w-[30%] max-sm:h-[30%]">
                     <h2 className="text-white text-center font-[Montserrat] font-semibold p-[2%]">Our Socials</h2>
                     <div
                         className="flex flex-row max-sm:flex-col justify-evenly items-center max-sm:h-[100%]">
-                        <a href="https://x.com" className="text-white"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 1200 1227"
-                            fill="currentColor"
-                            className="w-6 h-6 text-white"
-                        >
-                            <path d="M713.6 627.2 1174 1227H960.2L590.7 749.6 155.4 1227H0L501 674.6 56.2 0h224.2l342.1 486.7L999 0H1154L713.6 627.2z" />
-                        </svg>
+                        <a href="https://www.linkedin.com/company/106834558/admin/dashboard/" className="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="40" height="40" fill="#0077B5"
+                            className="w-6 h-6">
+                                <path d="M100.28 448H7.4V149.1h92.88zm-46.44-340.6C24.45 107.4 0 82.3 0 51.2 0 23 23.56 0 52.79 0s52.79 23 52.79 51.2c0 31.1-24.44 56.2-51.74 56.2zM447.9 448h-92.4V302.4c0-34.7-.7-79.4-48.38-79.4-48.4 0-55.8 37.8-55.8 76.9V448h-92.4V149.1h88.7v40.8h1.3c12.3-23.3 42.5-48.4 87.5-48.4 93.6 0 110.8 61.6 110.8 141.6V448z" />
+                            </svg>
+
                         </a>
 
 
@@ -54,7 +52,7 @@ export default function Footer() {
                         </svg>
                         </a>
 
-                        <a href="https://instagram.com" className="text-white"><svg
+                        <a href="https://www.instagram.com/rafbasoft?igsh=MTZjYWh2eHNzMnI4YQ==" className="text-white"><svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"
                             fill="currentColor"
