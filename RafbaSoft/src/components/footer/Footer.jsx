@@ -26,43 +26,43 @@ export default function Footer() {
                     <div
                         className="flex flex-row max-sm:flex-col justify-evenly items-center max-sm:h-[100%]">
                         <a href="https://www.linkedin.com/company/106834558/admin/dashboard/" className="text-white"
-                        target="_blank">
+                            target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="40" height="40" fill="#0077B5"
-                            className="w-6 h-6">
+                                className="w-6 h-6">
                                 <path d="M100.28 448H7.4V149.1h92.88zm-46.44-340.6C24.45 107.4 0 82.3 0 51.2 0 23 23.56 0 52.79 0s52.79 23 52.79 51.2c0 31.1-24.44 56.2-51.74 56.2zM447.9 448h-92.4V302.4c0-34.7-.7-79.4-48.38-79.4-48.4 0-55.8 37.8-55.8 76.9V448h-92.4V149.1h88.7v40.8h1.3c12.3-23.3 42.5-48.4 87.5-48.4 93.6 0 110.8 61.6 110.8 141.6V448z" />
                             </svg>
 
                         </a>
 
 
-                        <a href="https://facebook.com" className="text-white"
-                        target="_blank"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                            className="w-6 h-6 text-blue-600"
-                        >
-                            <path
-                                d="M22.675 0h-21.35C.594 0 0 .593 0 1.326v21.348C0 23.407.594 24 1.326 
+                        <a href="https://www.facebook.com/profile.php?id=61573870153011" className="text-white"
+                            target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                                className="w-6 h-6 text-blue-600"
+                            >
+                                <path
+                                    d="M22.675 0h-21.35C.594 0 0 .593 0 1.326v21.348C0 23.407.594 24 1.326 
        24H12.82v-9.294H9.692V11.03h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 
        1.325 0 2.466.099 2.797.143v3.24h-1.918c-1.504 
        0-1.796.715-1.796 1.763v2.312h3.587l-.467 
        3.676h-3.12V24h6.116C23.407 
        24 24 23.407 24 22.674V1.326C24 
        .593 23.407 0 22.675 0z"
-                            />
-                        </svg>
+                                />
+                            </svg>
                         </a>
 
                         <a href="https://www.instagram.com/rafbasoft?igsh=MTZjYWh2eHNzMnI4YQ==" className="text-white"
-                        target="_blank"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"
-                            fill="currentColor"
-                            className="w-6 h-6 text-pink-500"
-                        >
-                            <path
-                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 
+                            target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"
+                                fill="currentColor"
+                                className="w-6 h-6 text-pink-500"
+                            >
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 
     114.9s51.3 114.9 114.9 114.9 114.9-51.3 
     114.9-114.9S287.6 141 224.1 
     141zm0 186.6c-39.6 0-71.7-32.1-71.7-71.7 
@@ -90,8 +90,8 @@ export default function Footer() {
     132.1 9c19.6 7.8 34.7 22.9 42.6 
     42.6 11.7 29.5 9 99.5 9 132.1s2.7 
     102.7-8.9 132.2z"
-                            />
-                        </svg>
+                                />
+                            </svg>
                         </a>
                     </div>
                 </div>
