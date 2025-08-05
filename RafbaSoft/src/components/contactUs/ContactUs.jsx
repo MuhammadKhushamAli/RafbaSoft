@@ -17,10 +17,10 @@ export default function ContactUs() {
         setUserPhoneNumber('');
         setUserQuestion('');
 
-        emailjs.sendForm('service_oh8edu8',
-            'template_tlomf7q',
+        emailjs.sendForm('service_l520juf',
+            'template_1xdh83c',
             formRef.current,
-            'W2hSrsc2Dezz_alyc'
+            'RJTL7B8Rdy54oMf78'
         )
         .then(() => {
             alert('Your Form Submitted');
