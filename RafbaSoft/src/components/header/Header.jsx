@@ -9,7 +9,10 @@ export default function Header() {
         justify-evenly
         w-full
         top-0
-        box-border'>
+        box-border
+        sticky
+        z-50
+        bg-white'>
             <Link
                 to='/'
                 className='w-[20%]'
