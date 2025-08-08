@@ -175,7 +175,8 @@ export default function Home() {
                 <div
                     ref={ref}
                     className='flex flex-row max-md:flex-col justify-between max-md:justify-evenly items-center h-full w-full'>
-                    <div>
+                    <div
+                    className='m-auto'>
                         <h4
                             className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Interprice Soft Projects</h4>
                         <h4
