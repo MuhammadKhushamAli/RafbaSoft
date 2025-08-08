@@ -185,7 +185,7 @@ export default function Home() {
                     </div>
                     <div>
                         <h4
-                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Our SBPs</h4>
+                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Our SBP</h4>
                         <h4
                             className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
                             {smpCounter}+
@@ -208,7 +208,9 @@ export default function Home() {
                 afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
                 className={`w-full
             p-[10%]
-            max-sm:p-[2%]
+            max-sm:p-[5%]
+            max-sm:mt-[15%]
+            max-sm:mb-[15%]
             box-border`}>
                 <h2
                     className='w-full text-5xl max-sm:text-3xl text-center font-black font-[Montserrat] uppercase'>Vision</h2>
