@@ -18,6 +18,7 @@ export default function DetailList({ heading, details }) {
             </div>
             {isClicked && details.map((detail) => (
                 <InView
+                key={detail}
                     beforeClassName={'opacity-0 translate-x-[200px]'}
                     afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
                     className="w-full ml-14 border-b-1 m-3">

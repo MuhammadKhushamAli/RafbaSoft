@@ -1,7 +1,7 @@
 import { useState } from "react";
-import InView from "../inView/InView";
+import InView from "./inView/InView";
 
-export default function ServicesCard({ imageUrl, description }) {
+export default function ServicesCard({ imageUrl, description, disabled = false, hidden = false, className = ''}) {
     const [isClicked, setIsClicked] = useState(false);
     return (
         <InView
@@ -20,15 +20,18 @@ export default function ServicesCard({ imageUrl, description }) {
             justify-between
             items-center`}>
                 <img src={imageUrl} alt="Service_Image"
-                    className="w-[356px]
+                    className={`w-[356px]
             h-[200px]
             rounded-2xl
-            object-cover"/>
+            ${className}`}/>
                 {isClicked ?
                     <p
                         className="text-center font-[Roboto] pb-2 pt-2">{description}
                     </p> : null}
-                <button onClick={() => setIsClicked(prev => !prev)}
+                <button 
+                disabled = {disabled}
+                hidden = {hidden}
+                onClick={() => setIsClicked(prev => !prev)}
                     className="bg-red-500
                 text-white
                 p-2

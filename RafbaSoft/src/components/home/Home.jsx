@@ -1,9 +1,9 @@
 import IntroImg from '/assets/IntroImg.png';
-import TextileImg from '/assets/Textile.png'
-import GymImg from '/assets/Gym.png'
-import { useEffect, useRef, useState } from 'react';
 import InView from '../inView/InView';
 import DetailList from './detailList';
+import ServicesCard from '../Card';
+import { useInView } from 'react-intersection-observer';
+import { useEffect, useRef, useState } from 'react';
 
 const experies = [
     {
@@ -31,37 +31,58 @@ const experies = [
     }
 ];
 
-export default function Home() {
-    const [customersLogos, setCustomersLogos] = useState(['ABS.jpg',
-        'City.jpg',
-        'Corvit.jpg',
-        'Informatics.jpg',
-        'Muscular.jpg',
-        'Shell.jpg']);
-    const [isAnimation, setIsAnimation] = useState(false);
+const customer = ['ABS.jpg',
+    'City.jpg',
+    'Corvit.jpg',
+    'Informatics.jpg',
+    'Muscular.jpg',
+    'Shell.jpg'
+];
 
-    const animationInterval = useRef(null);
-    const animationTimeout = useRef(null);
+
+export default function Home() {
+    const { ref, inView } = useInView({
+        triggerOnce: false,
+        threshold: 0.1
+    });
+
+    const [projectCounter, setProjectCounter] = useState(0);
+    const [clientCounter, setClientCounter] = useState(0);
+    const isProjectCompleted = useRef(false);
+    const isClientCompleted = useRef(false);
 
     useEffect(() => {
+        let interval = null;
+        console.log(inView)
+        if (inView && !isClientCompleted.current && !isProjectCompleted.current) {
+            const projectCount = 20;
+            const clientCount = 100;
 
-        animationInterval.current = setInterval(() => {
-            setIsAnimation(true);
-            animationTimeout.current = setTimeout(() => {
-                setCustomersLogos((prev) => {
-                    const [firstOne, ...remaining] = prev;
-                    return [...remaining, firstOne];
-                })
-                setIsAnimation(false);
-            }, 500)
-        }, 2000);
+            interval = setInterval(() => {
+                if (!isProjectCompleted.current) {
+                    setProjectCounter(prev => {
+                        if (prev < projectCount)
+                            return prev + 1;
+                        isProjectCompleted.current = true;
+                        return prev;
+                    });
+                }
+                if (!isClientCompleted.current) {
+                    setClientCounter(prev => {
+                        if (prev < clientCount)
+                            return prev + 1;
+                        isClientCompleted.current = true;
+                        return prev;
+                    });
+                }
 
-
-        return () => {
-            clearTimeout(animationTimeout.current);
-            clearInterval(animationInterval.current);
+                if (isProjectCompleted.current && isClientCompleted.current) {
+                    clearInterval(interval);
+                }
+            }, 50)
         }
-    }, [])
+        return () => clearInterval(interval);
+    }, [inView]);
 
     return (
         <main
@@ -113,19 +134,53 @@ export default function Home() {
                     Our Customers
                 </h1>
                 <div
-                    className='flex
-                    flex-row
-                    justify-between
-                    m-auto
-                    w-[50%]
-                    max-sm:w-[80%]
-                    overflow-hidden
-                    whitespace-nowrap'>
-                    {customersLogos.map((customer, i) => (
-                        <img src={`/customers/${customer}`} alt='Coustomer Logo'
-                            className={`w-[20%] object-contain
-                                ${isAnimation && 'transition-transform duration-500 ease-in-out -translate-x-[100%]'}`} key={i} />
+                    className='w-full
+            p-[10%]
+            pt-[5%]
+            max-sm:p-[5%]
+            max-sm:pt-[2%]
+            flex
+            flex-row
+            flex-wrap
+            justify-evenly
+            items-center
+            gap-9
+            box-border
+            overflow-hidden'>
+                    {customer.map((customer) => (
+                        <ServicesCard imageUrl={`/customers/${customer}`} disabled={true} hidden={true} className={'object-contain m-auto'} />
                     ))}
+                </div>
+            </InView>
+
+            <InView
+                beforeClassName={'opacity-0 translate-x-[200px]'}
+                afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
+                className={`w-full
+                p-[10%]
+                max-sm:p-[2%]
+                h-screen
+                box-border`}>
+                <div
+                    ref={ref}
+                    className='flex flex-row max-md:flex-col justify-evenly items-center h-full w-full'>
+                    <div>
+                        <h4
+                            className='font-[Montserrat] font-black text-5xl max-sm:text-3xl'>Our Projects</h4>
+                        <h4
+                            className='font-[Montserrat] font-black text-6xl max-sm:text-4xl'>
+                            {projectCounter}+
+                        </h4>
+                    </div>
+                    <div>
+                        <h4
+                            className='font-[Montserrat] font-black text-5xl max-sm:text-3xl'>Our Clients</h4>
+                        <h4
+                            className='font-[Montserrat] font-black text-6xl max-sm:text-4xl'>
+                            {clientCounter}+
+                        </h4>
+                    </div>
+
                 </div>
             </InView>
 
@@ -138,7 +193,8 @@ export default function Home() {
             box-border`}>
                 <h2
                     className='w-full text-5xl max-sm:text-3xl text-center font-black font-[Montserrat] uppercase'>Vision</h2>
-                <p>To become a globally recognized software company, enabling businesses to thrive through intelligent, reliable, and fully customized digital systems.
+                <p
+                className='font-[Roboto] text-center'>To become a globally recognized software company, enabling businesses to thrive through intelligent, reliable, and fully customized digital systems.
                 </p>
             </InView>
 
@@ -153,11 +209,10 @@ export default function Home() {
                 p-[10%]
                 max-sm:p-[2%]
                 h-screen
-                max-md:h-[150vh]
                 box-border`}>
-                    {experies.map((experty) => (
-                        <DetailList heading={experty.heading} details={experty.details}/>
-                    ))}
+                {experies.map((experty) => (
+                    <DetailList key={experty.heading} heading={experty.heading} details={experty.details} />
+                ))}
             </div>
         </main >
     )

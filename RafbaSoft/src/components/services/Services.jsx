@@ -1,4 +1,4 @@
-import ServicesCard from "./ServiceCard";
+import ServicesCard from "../Card";
 import InView from "../inView/InView";
 
 const cardsArray = [
@@ -63,7 +63,7 @@ export default function Services() {
             </InView>
             {
                 cardsArray.map((image, i) => (
-                        <ServicesCard key={i} imageUrl={`/assets/${image.name}`} description={image.description} />
+                        <ServicesCard key={i} imageUrl={`/assets/${image.name}`} description={image.description} className={'object-cover'} />
                 ))
             }
         </main>
