@@ -169,22 +169,24 @@ export default function Home() {
                 afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
                 className={`w-full
                 p-[10%]
-                max-sm:p-[2%]
+                max-sm:p-[5%]
                 h-screen
                 box-border`}>
                 <div
                     ref={ref}
-                    className='flex flex-row max-md:flex-col justify-between max-md:justify-evenly items-center h-full w-full'>
+                    className='flex flex-row max-md:flex-col justify-between max-md:justify-evenly items-center h-full w-full
+                    gap-3 max-md:gap-5'>
                     <div
-                    className='m-auto'>
+                    className='w-[20%]'>
                         <h4
-                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Interprice Soft Projects</h4>
+                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Interprice Project</h4>
                         <h4
                             className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
                             {projectCounter}+
                         </h4>
                     </div>
-                    <div>
+                    <div
+                    className='w-[20%]'>
                         <h4
                             className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>SBP</h4>
                         <h4
@@ -192,12 +194,13 @@ export default function Home() {
                             {smpCounter}+
                         </h4>
                     </div>
-                    <div>
+                    <div
+                    className='w-[20%]'>
                         <h4
-                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Our Clients</h4>
+                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Satisified Clients</h4>
                         <h4
                             className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
-                            {clientCounter}+
+                            {clientCounter}%
                         </h4>
                     </div>
 
