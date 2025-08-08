@@ -174,7 +174,7 @@ export default function Home() {
                 box-border`}>
                 <div
                     ref={ref}
-                    className='flex flex-row max-md:flex-col justify-between items-center h-full w-full'>
+                    className='flex flex-row max-md:flex-col justify-between max-md:justify-evenly items-center h-full w-full'>
                     <div>
                         <h4
                             className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Our Projects</h4>
