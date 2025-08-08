@@ -54,7 +54,7 @@ export default function Home() {
     useEffect(() => {
         let interval = null;
         console.log(inView)
-        if (inView && !isClientCompleted.current && !isProjectCompleted.current) {
+        if (inView && (!isClientCompleted.current || !isProjectCompleted.current)) {
             const projectCount = 20;
             const clientCount = 100;
 
