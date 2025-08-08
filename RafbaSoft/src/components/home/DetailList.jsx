@@ -11,7 +11,7 @@ export default function DetailList({ heading, details }) {
             <div
                 className="flex flex-row w-full justify-between items-center p-2 border-b-2">
                 <h3
-                    className="font-[Roboto]">{heading}</h3>
+                    className="font-[Roboto] text-3xl">{heading}</h3>
                 <button onClick={() => setIsClicked(prev => !prev)}
                     className={`transition-transform duration-700 ${isClicked ? 'rotate-45' : 'rotate-0'}`}>
                         +</button>

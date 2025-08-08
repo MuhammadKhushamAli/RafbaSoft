@@ -47,15 +47,17 @@ export default function Home() {
     });
 
     const [projectCounter, setProjectCounter] = useState(0);
+    const [smpCounter, setSMPCounter] = useState(0);
     const [clientCounter, setClientCounter] = useState(0);
     const isProjectCompleted = useRef(false);
+    const isSMPProjectCompleted = useRef(false);
     const isClientCompleted = useRef(false);
-
     useEffect(() => {
         let interval = null;
         console.log(inView)
-        if (inView && (!isClientCompleted.current || !isProjectCompleted.current)) {
+        if (inView && (!isClientCompleted.current || !isProjectCompleted.current || !isSMPProjectCompleted.current)) {
             const projectCount = 20;
+            const SMPCount = 552;
             const clientCount = 100;
 
             interval = setInterval(() => {
@@ -64,6 +66,15 @@ export default function Home() {
                         if (prev < projectCount)
                             return prev + 1;
                         isProjectCompleted.current = true;
+                        return prev;
+                    });
+                }
+
+                if (!isSMPProjectCompleted.current) {
+                    setSMPCounter(prev => {
+                        if (prev < SMPCount)
+                            return prev + 1;
+                        isSMPProjectCompleted.current = true;
                         return prev;
                     });
                 }
@@ -76,7 +87,7 @@ export default function Home() {
                     });
                 }
 
-                if (isProjectCompleted.current && isClientCompleted.current) {
+                if (isProjectCompleted.current && isClientCompleted.current && isSMPProjectCompleted.current) {
                     clearInterval(interval);
                 }
             }, 50)
@@ -174,6 +185,14 @@ export default function Home() {
                     </div>
                     <div>
                         <h4
+                            className='font-[Montserrat] font-black text-5xl max-sm:text-3xl'>Our SMPs</h4>
+                        <h4
+                            className='font-[Montserrat] font-black text-6xl max-sm:text-4xl'>
+                            {smpCounter}+
+                        </h4>
+                    </div>
+                    <div>
+                        <h4
                             className='font-[Montserrat] font-black text-5xl max-sm:text-3xl'>Our Clients</h4>
                         <h4
                             className='font-[Montserrat] font-black text-6xl max-sm:text-4xl'>
@@ -194,7 +213,7 @@ export default function Home() {
                 <h2
                     className='w-full text-5xl max-sm:text-3xl text-center font-black font-[Montserrat] uppercase'>Vision</h2>
                 <p
-                className='font-[Roboto] text-center'>To become a globally recognized software company, enabling businesses to thrive through intelligent, reliable, and fully customized digital systems.
+                    className='font-[Roboto] text-center'>To become a globally recognized software company, enabling businesses to thrive through intelligent, reliable, and fully customized digital systems.
                 </p>
             </InView>
 
