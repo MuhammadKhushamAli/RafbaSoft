@@ -174,28 +174,28 @@ export default function Home() {
                 box-border`}>
                 <div
                     ref={ref}
-                    className='flex flex-row max-md:flex-col justify-evenly items-center h-full w-full'>
+                    className='flex flex-row max-md:flex-col justify-between items-center h-full w-full'>
                     <div>
                         <h4
-                            className='font-[Montserrat] font-black text-5xl max-sm:text-3xl'>Our Projects</h4>
+                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Our Projects</h4>
                         <h4
-                            className='font-[Montserrat] font-black text-6xl max-sm:text-4xl'>
+                            className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
                             {projectCounter}+
                         </h4>
                     </div>
                     <div>
                         <h4
-                            className='font-[Montserrat] font-black text-5xl max-sm:text-3xl'>Our SMPs</h4>
+                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Our SBPs</h4>
                         <h4
-                            className='font-[Montserrat] font-black text-6xl max-sm:text-4xl'>
+                            className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
                             {smpCounter}+
                         </h4>
                     </div>
                     <div>
                         <h4
-                            className='font-[Montserrat] font-black text-5xl max-sm:text-3xl'>Our Clients</h4>
+                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Our Clients</h4>
                         <h4
-                            className='font-[Montserrat] font-black text-6xl max-sm:text-4xl'>
+                            className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
                             {clientCounter}+
                         </h4>
                     </div>
