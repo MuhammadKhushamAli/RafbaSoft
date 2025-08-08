@@ -1,6 +1,6 @@
 import IntroImg from '/assets/IntroImg.png';
 import InView from '../inView/InView';
-import DetailList from './detailList';
+import DetailList from './DetailList';
 import ServicesCard from '../Card';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from 'react';
