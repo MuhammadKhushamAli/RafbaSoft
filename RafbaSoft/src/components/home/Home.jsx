@@ -177,7 +177,7 @@ export default function Home() {
                     className='flex flex-row max-md:flex-col justify-between max-md:justify-evenly items-center h-full w-full'>
                     <div>
                         <h4
-                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Our Projects</h4>
+                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Interprice Soft Projects</h4>
                         <h4
                             className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
                             {projectCounter}+
@@ -185,7 +185,7 @@ export default function Home() {
                     </div>
                     <div>
                         <h4
-                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Our SBP</h4>
+                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>SBP</h4>
                         <h4
                             className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
                             {smpCounter}+
