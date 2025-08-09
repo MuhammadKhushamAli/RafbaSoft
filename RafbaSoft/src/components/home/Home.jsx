@@ -2,8 +2,7 @@ import IntroImg from '/assets/IntroImg.png';
 import InView from '../inView/InView';
 import DetailList from './DetailList';
 import ServicesCard from '../Card';
-import { useInView } from 'react-intersection-observer';
-import { useEffect, useRef, useState } from 'react';
+import Counter from './Counter';
 
 const experies = [
     {
@@ -39,61 +38,27 @@ const customer = ['ABS.jpg',
     'Shell.jpg'
 ];
 
+const counters = [
+    {
+        title: 'Interprice Project',
+        unit: '+',
+        count: 200
+    },
+
+    {
+        title: 'SBP',
+        unit: '+',
+        count: 552
+    },
+
+    {
+        title: 'Satisified Clients',
+        unit: '%',
+        count: 100
+    }
+];
 
 export default function Home() {
-    const { ref, inView } = useInView({
-        triggerOnce: false,
-        threshold: 0.1
-    });
-
-    const [projectCounter, setProjectCounter] = useState(0);
-    const [smpCounter, setSMPCounter] = useState(0);
-    const [clientCounter, setClientCounter] = useState(0);
-    const isProjectCompleted = useRef(false);
-    const isSMPProjectCompleted = useRef(false);
-    const isClientCompleted = useRef(false);
-    useEffect(() => {
-        let interval = null;
-        console.log(inView)
-        if (inView && (!isClientCompleted.current || !isProjectCompleted.current || !isSMPProjectCompleted.current)) {
-            const projectCount = 20;
-            const SMPCount = 552;
-            const clientCount = 100;
-
-            interval = setInterval(() => {
-                if (!isProjectCompleted.current) {
-                    setProjectCounter(prev => {
-                        if (prev < projectCount)
-                            return prev + 1;
-                        isProjectCompleted.current = true;
-                        return prev;
-                    });
-                }
-
-                if (!isSMPProjectCompleted.current) {
-                    setSMPCounter(prev => {
-                        if (prev < SMPCount)
-                            return prev + 1;
-                        isSMPProjectCompleted.current = true;
-                        return prev;
-                    });
-                }
-                if (!isClientCompleted.current) {
-                    setClientCounter(prev => {
-                        if (prev < clientCount)
-                            return prev + 1;
-                        isClientCompleted.current = true;
-                        return prev;
-                    });
-                }
-
-                if (isProjectCompleted.current && isClientCompleted.current && isSMPProjectCompleted.current) {
-                    clearInterval(interval);
-                }
-            }, 50)
-        }
-        return () => clearInterval(interval);
-    }, [inView]);
 
     return (
         <main
@@ -159,7 +124,11 @@ export default function Home() {
             box-border
             overflow-hidden'>
                     {customer.map((customer) => (
-                        <ServicesCard imageUrl={`/customers/${customer}`} disabled={true} hidden={true} className={'object-contain m-auto'} />
+                        <ServicesCard key={customer}
+                            imageUrl={`/customers/${customer}`}
+                            disabled={true}
+                            hidden={true}
+                            className={'object-contain m-auto'} />
                     ))}
                 </div>
             </InView>
@@ -173,36 +142,16 @@ export default function Home() {
                 h-screen
                 box-border`}>
                 <div
-                    ref={ref}
                     className='flex flex-row max-md:flex-col justify-between max-md:justify-evenly items-center h-full w-full
                     gap-3 max-md:gap-5'>
-                    <div
-                    className='w-[20%]'>
-                        <h4
-                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Interprice Project</h4>
-                        <h4
-                            className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
-                            {projectCounter}+
-                        </h4>
-                    </div>
-                    <div
-                    className='w-[20%]'>
-                        <h4
-                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>SBP</h4>
-                        <h4
-                            className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
-                            {smpCounter}+
-                        </h4>
-                    </div>
-                    <div
-                    className='w-[20%]'>
-                        <h4
-                            className='font-[Montserrat] font-black text-4xl max-sm:text-3xl'>Satisified Clients</h4>
-                        <h4
-                            className='font-[Montserrat] font-black text-5xl max-sm:text-4xl'>
-                            {clientCounter}%
-                        </h4>
-                    </div>
+                    {
+                        counters.map(counter => (
+                            <Counter key={counter.title}
+                                totalCount={counter.count}
+                                unit={counter.unit}
+                                title={counter.title} />
+                        ))
+                    }
 
                 </div>
             </InView>
@@ -217,7 +166,15 @@ export default function Home() {
             max-sm:mb-[15%]
             box-border`}>
                 <h2
-                    className='w-full text-5xl max-sm:text-3xl text-center font-black font-[Montserrat] uppercase'>Vision</h2>
+                    className='w-full
+                text-5xl
+                max-sm:text-3xl
+                text-center
+                font-black
+                font-[Montserrat]
+                p-[2%]
+                uppercase
+                box-border'>Vision</h2>
                 <p
                     className='font-[Roboto] text-center'>To become a globally recognized software company, enabling businesses to thrive through intelligent, reliable, and fully customized digital systems.
                 </p>
@@ -236,7 +193,9 @@ export default function Home() {
                 h-screen
                 box-border`}>
                 {experies.map((experty) => (
-                    <DetailList key={experty.heading} heading={experty.heading} details={experty.details} />
+                    <DetailList key={experty.heading}
+                        heading={experty.heading}
+                        details={experty.details} />
                 ))}
             </div>
         </main >
