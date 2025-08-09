@@ -103,7 +103,7 @@ export default function Home() {
                 max-sm:mt-[10%]
                 max-sm:mb-[10%]
                 h-screen
-                max-sm:h-[80%]
+                max-sm:h-auto
                 box-border`}>
                 <h1
                     className='font-[Montserrat] w-[30%] max-sm:w-[50%] text-5xl text-center font-bold uppercase max-sm:text-lg'>We build smart software that simplifies business</h1>
