@@ -10,7 +10,10 @@ const experies = [
         details: [
             '🖥 Custom Business Software Development',
             '🔄 ERP Implementation (Oracle & Odoo)',
-            '🤖 AI Integration & Custom Chatbot'
+            '🤖 AI Integration & Custom Chatbot',
+            '🏥 Hospital Management Software',
+            '🧵 Textile & Stitching ERP',
+            '🛢 Petroleum & Fuel Station Software'
         ]
     },
     {
@@ -21,11 +24,30 @@ const experies = [
         ]
     },
     {
-        heading: 'Systems',
+        heading: 'Technology',
         details: [
-            '🏥 Hospital Management Software',
-            '🧵 Textile & Stitching ERP',
-            '🛢 Petroleum & Fuel Station Software'
+            '💻 Customer software development',
+            '🔄 Software lifecycle management',
+            '🌐 Web development',
+            '📱 Mobile app development',
+            '☁️ Cloud computing'
+        ]
+    },
+    {
+        heading: 'Creative',
+        details: [
+            '🎨 UX/UI Design',
+            '🖌️ Graphic Design',
+            '🖥️ 3D Design'
+        ]
+    },
+    {
+        heading: 'Strategy',
+        details: [
+            '🛠️ Software Development Strategy',
+            '💼 Consulting Services',
+            '📊 CRM and ERP Strategy',
+            '🚀 Product and Performance Strategy'
         ]
     }
 ];
@@ -190,7 +212,6 @@ export default function Home() {
                 items-start
                 p-[10%]
                 max-sm:p-[2%]
-                h-screen
                 box-border`}>
                 {experies.map((experty) => (
                     <DetailList key={experty.heading}
