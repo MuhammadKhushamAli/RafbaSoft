@@ -112,8 +112,8 @@ export default function Home() {
             </InView>
 
             <InView
-                beforeClassName={'opacity-0 -translate-x-[200px]'}
-                afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
+                beforeClassName={'opacity-0 -translate-y-[200px]'}
+                afterClassName={'opacity-100 tansition-all translate-y-0 duration-700'}
                 className={`w-full
                 p-[10%]
                 max-sm:p-[5%]
