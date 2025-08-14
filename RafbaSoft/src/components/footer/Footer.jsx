@@ -1,7 +1,8 @@
 export default function Footer() {
     return (
         <footer
-            className="w-full h-[100vh] bg-blue-950 flex flex-col justify-end box-border">
+            className="w-full h-[100vh]
+            bg-blue-950 flex flex-col justify-end box-border">
                 <h1
                 className="h-[80%]
                 max-md:h-[50%]

@@ -254,7 +254,6 @@ export default function Home() {
                 beforeClassName={'opacity-0 translate-x-[200px]'}
                 afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
                 className={`w-full
-            h-screen
             box-border`}>
                 <img src="assets/cover2.jpg" alt="Last Image" />
             </InView>
