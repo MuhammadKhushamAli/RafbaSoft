@@ -106,6 +106,7 @@ export default function Home() {
                 <img src="/assets/cover.jpg" alt="Cover Image"
                     className='w-full
                 aspect-16/8
+                max-sm:aspect-12/16
                 rounded-xl
                 object-cover' />
 
