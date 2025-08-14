@@ -31,6 +31,7 @@ export default function Header() {
         justify-evenly
         items-center
         w-[90%]
+        max-sm:w-full
         border-1
         rounded-2xl
         border-black

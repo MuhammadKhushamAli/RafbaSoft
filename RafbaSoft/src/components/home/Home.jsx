@@ -117,8 +117,7 @@ export default function Home() {
                     <h1
                         className='font-[Montserrat]
                         w-[80%]
-                        max-md:w-full
-                        text-5xl
+                        text-4xl
                         text-center
                         font-bold
                         uppercase
@@ -128,6 +127,7 @@ export default function Home() {
                     </h1>
                     <Button
                         className={`w-[30%]
+                            max-sm:w-[50%]
                         bg-red-600
                         hover:bg-red-400
                         p-[1%]
