@@ -2,6 +2,21 @@ export default function Footer() {
     return (
         <footer
             className="w-full h-[100vh] bg-blue-950 flex flex-col justify-end box-border">
+                <h1
+                className="h-[80%]
+                max-md:h-[50%]
+                text-center
+                text-white
+                w-[40%]
+                text-5xl
+                max-md:text-3xl
+                mt-[10%]
+                m-[5%]
+                box-border
+                font-[Montserrat]
+                font-black">
+                    Let Magic Together!
+                </h1>
             <div className="w-full flex flex-row justify-evenly h-[20%] max-md:h-[50%] items-center max-md:flex-col">
                 <div>
                     <h2 className="text-white text-center font-[Montserrat] font-bold">Need Any Help?</h2>

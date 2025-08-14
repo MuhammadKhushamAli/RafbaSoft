@@ -8,23 +8,32 @@ export default function DetailList({ heading, details }) {
             beforeClassName={'opacity-0 translate-x-[200px]'}
             afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
             className="w-full mt-[10%] mb-[10%] overflow-hidden">
-            <div
-                className="flex flex-row w-full justify-between items-center p-2 border-b-2">
-                <h3
-                    className="font-[Roboto] text-xl">{heading}</h3>
-                <button onClick={() => setIsClicked(prev => !prev)}
-                    className={`transition-transform duration-700 ${isClicked ? 'rotate-45' : 'rotate-0'}`}>
+            <ul>
+                <div
+                    className="flex flex-row w-full justify-between items-center p-2 border-b-2">
+                    <li
+                        className="font-[Roboto] text-xl
+                        list-inside
+                        list-disc">
+                        {heading}
+                    </li>
+                    <button onClick={() => setIsClicked(prev => !prev)}
+                        className={`transition-transform duration-700 ${isClicked ? 'rotate-45' : 'rotate-0'}`}>
                         +</button>
-            </div>
-            {isClicked && details.map((detail) => (
-                <InView
-                key={detail}
-                    beforeClassName={'opacity-0 translate-x-[200px]'}
-                    afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
-                    className="w-full ml-14 border-b-1 m-3">
-                    {detail}
-                </InView>
-            ))}
-        </InView>
+                </div>
+            </ul>
+            <ul>
+                {isClicked && details.map((detail) => (
+                    <InView
+                        key={detail}
+                        beforeClassName={'opacity-0 translate-x-[200px]'}
+                        afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
+                        className="w-full ml-14 border-b-1 m-3">
+                        <li
+                            className="list-disc">{detail}</li>
+                    </InView>
+                ))}
+            </ul >
+        </InView >
     )
 }

@@ -3,6 +3,7 @@ import InView from '../inView/InView';
 import DetailList from './DetailList';
 import ServicesCard from '../Card';
 import Counter from './Counter';
+import Button from '../Button';
 
 const experies = [
     {
@@ -93,6 +94,76 @@ export default function Home() {
             <InView
                 beforeClassName={'opacity-0 -translate-y-[100px]'}
                 afterClassName={'opacity-100 transition-all translate-y-0 duration-700'}
+                className={`
+                    h-max
+                    w-[80%]
+                    m-auto
+                    mt-[5%]
+                    max-sm:m-[10%]
+                    relative
+                    `}
+            >
+                <img src="/assets/cover.jpg" alt="Cover Image"
+                    className='w-full
+                aspect-16/8
+                rounded-xl
+                object-cover' />
+
+                <div
+                    className='w-full h-full absolute top-0
+                flex flex-col justify-evenly items-center p-[5%] max-md:p-[2%]'
+                >
+                    <h1
+                        className='font-[Montserrat]
+                        w-[80%]
+                        max-md:w-full
+                        text-5xl
+                        text-center
+                        font-bold
+                        uppercase
+                        max-md:text-lg
+                        text-white'>
+                        We build smart software that simplifies business
+                    </h1>
+                    <Button
+                        className={`w-[30%]
+                        bg-red-600
+                        hover:bg-red-400
+                        p-[1%]
+                        rounded-2xl
+                        text-2xl
+                        max-md:text-sm
+                        text-white
+                        font-medium
+                        font-[Roboto]`}
+                        navigateTo={'Contact-Us'}>
+                        Start Project
+                    </Button>
+
+                </div>
+            </InView>
+
+            <div
+                className={`w-full
+                    flex
+                    flex-col
+                    max-sm:flex-col
+                    justify-between
+                    max-sm:justify-evenly
+                    items-start
+                    p-[10%]
+                    max-sm:p-[5%]
+                    box-border`}>
+                {experies.map((experty) => (
+                    <DetailList key={experty.heading}
+                        heading={experty.heading}
+                        details={experty.details} />
+                ))}
+            </div>
+
+            <InView
+                beforeClassName={'opacity-0 -translate-y-[100px]'}
+                afterClassName={'opacity-100 transition-all translate-y-0 duration-700'}
                 className={`w-full
                 flex
                 flex-row
@@ -109,6 +180,29 @@ export default function Home() {
                     className='font-[Montserrat] w-[30%] max-sm:w-[50%] text-5xl text-center font-bold uppercase max-sm:text-lg'>We build smart software that simplifies business</h1>
                 <img src={IntroImg} alt="Intro_Image"
                     className='w-[40%] max-sm:w-[50%]' />
+            </InView>
+
+            <InView
+                beforeClassName={'opacity-0 translate-x-[200px]'}
+                afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
+                className={`w-full
+                p-[10%]
+                max-sm:p-[5%]
+                h-screen
+                box-border`}>
+                <div
+                    className='flex flex-row max-md:flex-col justify-between max-md:justify-evenly items-center h-full w-full
+                    gap-3 max-md:gap-5'>
+                    {
+                        counters.map(counter => (
+                            <Counter key={counter.title}
+                                totalCount={counter.count}
+                                unit={counter.unit}
+                                title={counter.title} />
+                        ))
+                    }
+
+                </div>
             </InView>
 
             <InView
@@ -159,66 +253,11 @@ export default function Home() {
                 beforeClassName={'opacity-0 translate-x-[200px]'}
                 afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
                 className={`w-full
-                p-[10%]
-                max-sm:p-[5%]
-                h-screen
-                box-border`}>
-                <div
-                    className='flex flex-row max-md:flex-col justify-between max-md:justify-evenly items-center h-full w-full
-                    gap-3 max-md:gap-5'>
-                    {
-                        counters.map(counter => (
-                            <Counter key={counter.title}
-                                totalCount={counter.count}
-                                unit={counter.unit}
-                                title={counter.title} />
-                        ))
-                    }
-
-                </div>
-            </InView>
-
-            <InView
-                beforeClassName={'opacity-0 translate-x-[200px]'}
-                afterClassName={'opacity-100 tansition-all translate-x-0 duration-700'}
-                className={`w-full
-            p-[10%]
-            max-sm:p-[5%]
-            max-sm:mt-[15%]
-            max-sm:mb-[15%]
+            h-screen
             box-border`}>
-                <h2
-                    className='w-full
-                text-5xl
-                max-sm:text-3xl
-                text-center
-                font-black
-                font-[Montserrat]
-                p-[2%]
-                uppercase
-                box-border'>Vision</h2>
-                <p
-                    className='font-[Roboto] text-center'>To become a globally recognized software company, enabling businesses to thrive through intelligent, reliable, and fully customized digital systems.
-                </p>
+                <img src="assets/cover2.jpg" alt="Last Image" />
             </InView>
 
-            <div
-                className={`w-full
-                flex
-                flex-col
-                max-sm:flex-col
-                justify-between
-                max-sm:justify-evenly
-                items-start
-                p-[10%]
-                max-sm:p-[2%]
-                box-border`}>
-                {experies.map((experty) => (
-                    <DetailList key={experty.heading}
-                        heading={experty.heading}
-                        details={experty.details} />
-                ))}
-            </div>
         </main >
     )
 }

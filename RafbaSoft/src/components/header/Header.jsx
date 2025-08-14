@@ -29,8 +29,13 @@ export default function Header() {
         flex-row
         h-[10vh]
         justify-evenly
-        w-full
-        top-0
+        items-center
+        w-[90%]
+        border-1
+        rounded-2xl
+        border-black
+        m-auto
+        top-5
         box-border
         sticky
         z-50
